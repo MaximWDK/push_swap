@@ -6,11 +6,11 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:16:14 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 15:12:16 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/06 17:37:18 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 static int	ft_is_sep(char c, char charset, char const *s, int type)
 {

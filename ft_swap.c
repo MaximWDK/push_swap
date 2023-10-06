@@ -6,11 +6,11 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:30:01 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 16:24:59 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/06 17:37:04 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 void	sa(t_list **list_a, int i)
 {

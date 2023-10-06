@@ -6,11 +6,11 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 01:24:36 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 15:20:41 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/06 17:37:43 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_push_swap.h"
 
 int	ft_atoi(const char *str)
 {
