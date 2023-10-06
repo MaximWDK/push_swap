@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 16:11:13 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/06 16:15:09 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	main(int argc, char **argv)
 	list_b = NULL;
 	if (argc >= 2)
 	{
-		
+		return (0);
 	}
 }
