@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/24 17:27:53 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/24 23:21:42 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,8 @@ void	ft_free(char **content)
 {
 	int	i;
 
-	i = 0;
-	while (content[i])
-	{
+	i = -1;
+	while (content[++i])
 		free(content[i]);
-		i++;
-	}
 	free(content);
 }
