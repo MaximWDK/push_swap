@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:52:00 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 17:36:37 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/24 17:28:09 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_free(char **content);
 
 // ft_error
 void	ft_error(void);
+void	ft_error_free(t_list **list_a);
 
 // ft_lists
 int		ft_lstsize(t_list *lst);
@@ -38,6 +39,13 @@ t_list	*ft_insertcontent(t_list *lst, int content);
 // ft_split
 char	**ft_split(char const *s, char c);
 
+// ft_initialize
+t_list	*ft_initialize(char **args);
+
+// ft_check
+void	ft_check_double(t_list **list_a);
+int		ft_check_already_sorted(t_list **list_a);
+
 // ft_atoi
 int		ft_atoi(const char *str);
 
@@ -47,6 +55,7 @@ void	ft_sort_three(t_list **list_a);
 void	ft_sort_four(t_list **list_a, t_list **list_b);
 void	ft_sort_five(t_list **list_a, t_list **list_b);
 void	ft_radix(t_list **list_a, t_list **list_b);
+t_list	**ft_to_index(t_list **list_a);
 
 // ft_push
 void	pa(t_list **list_a, t_list **list_b);

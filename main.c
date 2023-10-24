@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 17:45:48 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/24 17:27:53 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,25 @@ int	main(int argc, char **argv)
 	t_list	*list_a;
 	t_list	*list_b;
 	char	**args;
-	int		i;
 
-	list_a = NULL;
-	list_b = NULL;
-	if (argc < 2)
+	if (argc >= 2)
 	{
-		write(1, "Error: Not enough arguments\n", 28);
-		return (1);
+		if (argc == 2)
+		{
+			args = ft_split(argv[1], ' ');
+			if (!args)
+				exit(0);
+			list_a = ft_initialize(args);
+		}
+		if (argc > 2)
+				list_a = ft_initialize(&argv[1]);
+		ft_check_double(&list_a);
+		if (ft_check_already_sorted(&list_a))
+			ft_error_free(&list_a);
+		list_b = NULL;
+		ft_sort(&list_a, &list_b);
+		free_lists(&list_a, &list_b);
 	}
-	args = ft_split(argv[1], ' ');
-	i = 0;
-	while (args[i])
-	{
-		list_a = ft_insertcontent(list_a, ft_atoi(args[i]));
-		i++;
-	}
-	ft_sort(&list_a, &list_b);
-	free_lists(&list_a, &list_b);
-	ft_free(args);
 	return (0);
 }
 
