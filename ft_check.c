@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:03:19 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/24 15:11:34 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:06:22 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,55 @@
 
 void	ft_check_double(t_list **list_a)
 {
-	t_list	*temp;
-	t_list	*temp2;
+	t_list	*tmp;
+	t_list	*tmp2;
 
-	temp = *list_a;
-	while (temp)
+	tmp = *list_a;
+	while (tmp)
 	{
-		temp2 = temp->next;
-		while (temp2)
+		tmp2 = tmp->next;
+		while (tmp2)
 		{
-			if (temp->content == temp2->content)
-				ft_error();
-			temp2 = temp2->next;
+			if (tmp->content == tmp2->content)
+				ft_error_free(list_a);
+			tmp2 = tmp2->next;
 		}
-		temp = temp->next;
+		tmp = tmp->next;
 	}
 }
 
 int	ft_check_already_sorted(t_list **list_a)
 {
-	t_list	*temp;
+	t_list	*tmp;
 
-	temp = *list_a;
-	while (temp->next)
+	tmp = *list_a;
+	while (tmp->next)
 	{
-		if (temp->content > temp->next->content)
+		if (tmp->content > tmp->next->content)
 			return (0);
-		temp = temp->next;
+		tmp = tmp->next;
 	}
 	return (1);
+}
+
+int	ft_check_string(char *str)
+{
+	int	i;
+
+	i = 0;
+	if (str[i] == '-' && str[i + 1])
+		i++;
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i++]))
+			return (0);
+	}
+	return (1);
+}
+
+int	ft_isdigit(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

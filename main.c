@@ -6,11 +6,12 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/24 23:21:42 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:08:33 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -24,11 +25,18 @@ int	main(int argc, char **argv)
 		{
 			args = ft_split(argv[1], ' ');
 			if (!args)
-				exit(0);
+				ft_error();
 			list_a = ft_initialize(args);
 		}
 		if (argc > 2)
-				list_a = ft_initialize(&argv[1]);
+		{
+			args = ft_split(argv[1], ' ');
+			if (!args)
+				ft_error();
+			list_a = ft_initialize(&argv[1]);
+		}
+		if (!list_a)
+			ft_error_free(&list_a);
 		ft_check_double(&list_a);
 		if (ft_check_already_sorted(&list_a))
 			ft_error_free(&list_a);
@@ -37,20 +45,4 @@ int	main(int argc, char **argv)
 		free_lists(&list_a, &list_b);
 	}
 	return (0);
-}
-
-void	free_lists(t_list **list_a, t_list **list_b)
-{
-	ft_lstfree(*list_a);
-	ft_lstfree(*list_b);
-}
-
-void	ft_free(char **content)
-{
-	int	i;
-
-	i = -1;
-	while (content[++i])
-		free(content[i]);
-	free(content);
 }

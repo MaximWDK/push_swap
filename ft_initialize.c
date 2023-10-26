@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:55:40 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/24 16:57:23 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/26 15:01:30 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@ t_list	*ft_initialize(char **args)
 	int		i;
 
 	list_a = NULL;
-	i = 0;
-	while (args[i] && args)
+	i = -1;
+	while (args[++i] && args)
 	{
-		list_a = ft_insertcontent(list_a, ft_atoi(args[i]));
-		i++;
+		if (!ft_check_string(args[i]))
+			ft_error();
 	}
+	i = -1;
+	while (args[++i] && args)
+		list_a = ft_insertcontent(list_a, ft_atoi(args[i]));
 	return (list_a);
 }
 

@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:03:17 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/24 17:30:51 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/26 14:00:17 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 void	ft_error(void)
 {
-	write(1, "Error\n", 6);
+	write(2, "Error\n", 6);
 	exit(0);
 }
 
 void	ft_error_free(t_list **list_a)
 {
 	ft_lstfree(*list_a);
-	exit(0);
+	ft_error();
+}
+
+void	free_lists(t_list **list_a, t_list **list_b)
+{
+	ft_lstfree(*list_a);
+	ft_lstfree(*list_b);
 }

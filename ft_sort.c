@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:21:51 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/24 17:51:38 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/26 11:09:27 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,20 @@ void	ft_radix(t_list **list_a, t_list **list_b)
 
 void	ft_sort_three(t_list **list_a)
 {
-	// TO DO
+	if (list_a)
+		list_a = 0;
 }
 
 void	ft_sort_four(t_list **list_a, t_list **list_b)
 {
-	// TO DO
+	if (list_a && list_b)
+		list_b = list_a;
 }
 
 void	ft_sort_five(t_list **list_a, t_list **list_b)
 {
-	// TO DO
+	if (list_a && list_b)
+		list_b = list_a;
 }
 
 void	ft_sort(t_list **list_a, t_list **list_b)
