@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:52:00 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/26 12:24:57 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/27 13:51:32 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_list
 
 /*ft_error*/
 void	ft_error(void);
-void	ft_error_free(t_list **list_a);
+void	ft_error_free(t_list **list_a, int i);
 void	free_lists(t_list **list_a, t_list **list_b);
 
 /*ft_lists*/

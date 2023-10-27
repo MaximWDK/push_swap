@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:03:19 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/26 15:06:22 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/27 13:56:31 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_check_double(t_list **list_a)
 		while (tmp2)
 		{
 			if (tmp->content == tmp2->content)
-				ft_error_free(list_a);
+				ft_error_free(list_a, 1);
 			tmp2 = tmp2->next;
 		}
 		tmp = tmp->next;
