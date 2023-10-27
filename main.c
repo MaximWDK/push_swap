@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/27 14:52:51 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:58:01 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	main(int argc, char **argv)
 		if (argc == 2)
 			list_a = ft_initialize(args);
 		ft_free_tab(args);
-		free(args);
 		if (argc > 2)
 			list_a = ft_initialize(&argv[1]);
 		if (!list_a)
