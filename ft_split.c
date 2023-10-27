@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:21:35 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/27 14:54:12 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/10/27 15:00:20 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,17 +67,6 @@ static char	*ft_strdupcharset(char const *s, char charset)
 		word[i] = s[i];
 	word[i] = '\0';
 	return (word);
-}
-
-char	**ft_free_tab(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-		free(tab[i++]);
-	free(tab);
-	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
