@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:21:51 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/27 16:38:30 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/06 11:20:54 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	ft_radix(t_list **list_a, t_list **list_b)
 		while (++j < len)
 		{
 			if (((*list_a)->index >> i) & 1)
-				ra(list_a, 1);
+				rotate(list_a, 1);
 			else
 				pb(list_a, list_b);
 		}
@@ -44,9 +44,9 @@ void	ft_sort_three(t_list **list_a)
 	while (!ft_check_already_sorted(list_a))
 	{
 		if ((*list_a)->index > (*list_a)->next->index)
-			sa(list_a, 1);
+			swap(list_a, 1);
 		else
-			rra(list_a, 1);
+			reverserotate(list_a, 1);
 	}
 }
 
@@ -69,7 +69,7 @@ void	ft_sort(t_list **list_a, t_list **list_b)
 	size = ft_lstsize(*list_a);
 	list_a = ft_to_index(list_a);
 	if (size == 2)
-		sa(list_a, 1);
+		swap(list_a, 1);
 	else if (size == 3)
 		ft_sort_three(list_a);
 	else if (size == 4)

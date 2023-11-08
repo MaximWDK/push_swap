@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 14:52:00 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/27 14:54:24 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/06 11:19:45 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int		ft_check_already_sorted(t_list **list_a);
 int		ft_check_string(char *str);
 int		ft_isdigit(char c);
 
-
 /*ft_atoi*/
 int		ft_atoi(const char *str);
 
@@ -64,18 +63,15 @@ void	pa(t_list **list_a, t_list **list_b);
 void	pb(t_list **list_a, t_list **list_b);
 
 /*ft_swap*/
-void	sa(t_list **list_a, int i);
-void	sb(t_list **list_b, int i);
+void	swap(t_list **list_a, int i);
 void	ss(t_list **list_a, t_list **list_b);
 
 /*ft_rotate*/
-void	ra(t_list **list_a, int i);
-void	rb(t_list **list_b, int i);
+void	rotate(t_list **list_a, int i);
 void	rr(t_list **list_a, t_list **list_b);
 
 /*ft_reverse_rotate*/
-void	rra(t_list **list_a, int i);
-void	rrb(t_list **list_b, int i);
+void	reverserotate(t_list **list_a, int i);
 void	rrr(t_list **list_a, t_list **list_b);
 
 #endif
