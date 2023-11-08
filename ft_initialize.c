@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 14:55:40 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/26 15:01:30 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/08 16:10:33 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_initialize(char **args)
 	while (args[++i] && args)
 	{
 		if (!ft_check_string(args[i]))
-			ft_error();
+			return (NULL);
 	}
 	i = -1;
 	while (args[++i] && args)

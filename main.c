@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/27 14:58:01 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/08 16:22:46 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 		if (argc > 2)
 			list_a = ft_initialize(&argv[1]);
 		if (!list_a)
-			ft_error_free(&list_a, 1);
+			ft_error();
 		ft_check_double(&list_a);
 		if (ft_check_already_sorted(&list_a))
 			ft_error_free(&list_a, 0);
