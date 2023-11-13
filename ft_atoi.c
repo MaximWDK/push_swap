@@ -6,13 +6,13 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:21:59 by mleonet           #+#    #+#             */
-/*   Updated: 2023/11/13 16:13:04 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/13 23:26:03 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-int	ft_atoi(const char *str)
+long long int	ft_atoi(const char *str)
 {
 	long long int	res;
 	int				sign;
