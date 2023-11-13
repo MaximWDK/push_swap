@@ -6,7 +6,7 @@
 #    By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/06 14:52:30 by mleonet           #+#    #+#              #
-#    Updated: 2023/10/27 17:24:21 by mleonet          ###   ########.fr        #
+#    Updated: 2023/11/13 21:18:24 by mleonet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ft_check.c \
 OBJS = ${SRCS:.c=.o}
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address -g
+CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 
 .c.o:
