@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:50:20 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/06 17:37:36 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/13 15:33:41 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,29 +39,29 @@ t_list	*ft_lstnew(int content)
 
 void	ft_lstfree(t_list *lst)
 {
-	t_list	*temp;
+	t_list	*tmp;
 
 	while (lst)
 	{
-		temp = (lst)->next;
+		tmp = (lst)->next;
 		free(lst);
-		lst = temp;
+		lst = tmp;
 	}
 }
 
 t_list	*ft_insertcontent(t_list *lst, int content)
 {
 	t_list	*new;
-	t_list	*temp;
+	t_list	*tmp;
 
 	new = ft_lstnew(content);
 	if (!new)
 		return (NULL);
 	if (!lst)
 		return (new);
-	temp = lst;
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new;
+	tmp = lst;
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = new;
 	return (lst);
 }
