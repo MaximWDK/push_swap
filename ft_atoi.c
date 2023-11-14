@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:21:59 by mleonet           #+#    #+#             */
-/*   Updated: 2023/11/13 23:26:03 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/14 10:50:38 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,5 @@ long long int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 		res = res * 10 + (*str++ - '0');
-	if ((res * sign) >= 2147483648 || (res * sign) <= -2147483649)
-		return (0);
 	return (res * sign);
 }
