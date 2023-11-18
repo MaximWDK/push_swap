@@ -6,13 +6,12 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:27:12 by mleonet           #+#    #+#             */
-/*   Updated: 2023/11/06 11:02:15 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/18 15:05:22 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-// RECHECK
 void	reverserotate(t_list **list_a, int i)
 {
 	t_list	*tmp;

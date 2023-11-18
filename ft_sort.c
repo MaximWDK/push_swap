@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:21:51 by mleonet           #+#    #+#             */
-/*   Updated: 2023/11/06 11:20:54 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/18 16:14:02 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,14 +52,32 @@ void	ft_sort_three(t_list **list_a)
 
 void	ft_sort_four(t_list **list_a, t_list **list_b)
 {
-	if (list_a && list_b)
-		list_b = list_a;
+	while (ft_lstsize(*list_a) > 3)
+	{
+		if ((*list_a)->index == 0)
+			pb(list_a, list_b);
+		else
+			rotate(list_a, 1);
+	}
+	ft_sort_three(list_a);
+	while (*list_b)
+		pa(list_a, list_b);
 }
 
 void	ft_sort_five(t_list **list_a, t_list **list_b)
 {
-	if (list_a && list_b)
-		list_b = list_a;
+	while (ft_lstsize(*list_a) > 3)
+	{
+		if ((*list_a)->index == 0 || (*list_a)->index == 1)
+			pb(list_a, list_b);
+		else
+			rotate(list_a, 1);
+	}
+	ft_sort_three(list_a);
+	while (*list_b)
+		pa(list_a, list_b);
+	if ((*list_a)->index == 1)
+		swap(list_a, 1);
 }
 
 void	ft_sort(t_list **list_a, t_list **list_b)
