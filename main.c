@@ -6,12 +6,11 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 16:10:02 by mleonet           #+#    #+#             */
-/*   Updated: 2023/11/08 16:22:46 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/11/20 15:05:42 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
