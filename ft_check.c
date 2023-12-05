@@ -6,7 +6,7 @@
 /*   By: mleonet <mleonet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:03:19 by mleonet           #+#    #+#             */
-/*   Updated: 2023/10/27 13:56:31 by mleonet          ###   ########.fr       */
+/*   Updated: 2023/12/05 11:53:12 by mleonet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	ft_check_string(char *str)
 	int	i;
 
 	i = 0;
-	if (str[i] == '-' && str[i + 1])
+	if ((str[i] == '-' && str[i + 1]) || (str[i] == '+' && str[i + 1]))
 		i++;
 	while (str[i])
 	{
